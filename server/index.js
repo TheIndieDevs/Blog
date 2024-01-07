@@ -1,6 +1,6 @@
 
 const app = require('./src/routes/app.js');
-const connectDB = require('./src/configs/mongo.js');
+const connectDB = require('./src/services/mongo.js');
 const dotenv = require('dotenv');
 const PORT = process.env.port || 3000;
 

@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
+const config = require('../configs/mongo.config.js');
 
 const connectDB = async () => {
     try {
-      await mongoose.connect(process.env.DATABASE_URL, {
+      await mongoose.connect(config.URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true
       });
