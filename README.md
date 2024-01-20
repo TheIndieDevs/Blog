@@ -8,7 +8,7 @@ Version 2 of Blog
 - Install [MongoDB](https://www.mongodb.com/docs/manual/administration/install-community/) (if not using Docker for the database).
 
 ### Quick Start with Docker
-The development environment is dockerized for easy setup. Run the entire app (frontend, backend, db) with this commend:
+The development environment is dockerized for easy setup. Run the entire app (frontend, backend, db) with this command:
 ```
 docker compose up
 ```
