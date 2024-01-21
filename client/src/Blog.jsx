@@ -6,13 +6,11 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Header from './Header';
-import MainFeaturedPost from './MainFeaturedPost';
-import FeaturedPost from './FeaturedPost';
-// import Main from './Main';
-import Sidebar from './Sidebar';
-import Footer from './Footer';
-// import post1 from './blog-post.1.md';
+import Header from './components/Header';
+import MainFeaturedPost from './components/MainFeaturedPost';
+import FeaturedPost from './components/FeaturedPost';
+import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
 
 
 const sections = [
