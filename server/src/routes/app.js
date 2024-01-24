@@ -38,6 +38,7 @@ app.get('/stream', (req, res) => {
     res.flushHeaders();
     console.log("posting data")
     res.write(`data: ${JSON.stringify(featuredPosts)} \n\n`);
+    res.write(`data: somethingelse`);
     req.on('close', () => {
         res.end();
     })
