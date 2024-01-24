@@ -84,6 +84,24 @@ const sidebar = {
 const defaultTheme = createTheme();
 
 export default function Blog() {
+
+  const [posts, setPosts] = React.useState("");
+
+  const DB_URL = 'http://localhost:3000/stream';
+
+  React.useEffect(()=>{
+    const sse = new EventSource(DB_URL);
+
+  sse.onmessage = (e) => {
+    setPosts(posts + e.data);
+    console.log('getting data..')
+  }
+  return () => {
+    console.log('sse connection close')
+    sse.close();
+  }
+  }, [])
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
@@ -107,6 +125,8 @@ export default function Blog() {
           </Grid>
         </main>
       </Container>
+      sse: {posts}
+      
       <Footer
         title="Footer"
         description="Something here to give the footer a purpose!"
