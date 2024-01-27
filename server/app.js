@@ -26,9 +26,10 @@ const featuredPosts = [
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('backend opened');
-});
+app.use('/api/blogs', blogRoutes);
+app.use('/api/users', userRoutes);
+
+
 
 app.get('/stream', (req, res) => {
     console.log("data requested.")
@@ -43,6 +44,8 @@ app.get('/stream', (req, res) => {
         res.end();
     })
 })
+
+
 
 
 app.use((req, res, next) => {
