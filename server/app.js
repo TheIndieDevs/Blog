@@ -1,7 +1,8 @@
 
 const express = require('express');
 const cors = require('cors');
-
+const blogRoutes = require('./src/routes/blogRoutes')
+const userRoutes = require('./src/routes/userRoutes')
 const app = express();
 
 const featuredPosts = [

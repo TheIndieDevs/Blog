@@ -10,7 +10,7 @@ const blogSchema = new Schema({
         required: true,
     },
     author: {
-        type: Schema.Types.ObjectId,
+        type: String,
         require: true,
         ref: 'User'
     },
@@ -25,7 +25,7 @@ const blogSchema = new Schema({
     comments: [
         {
             author: {
-                type: Schema.Types.ObjectId,
+                type: String,
                 ref: 'User'
             },
             content: {
