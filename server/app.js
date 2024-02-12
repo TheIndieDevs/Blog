@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const blogRoutes = require('./src/routes/blogRoutes')
 const userRoutes = require('./src/routes/userRoutes')
+const authRoutes = require('./src/routes/authRoutes')
 const app = express();
 
 const featuredPosts = [
@@ -29,7 +30,7 @@ app.use(express.json());
 
 app.use('/api/blogs', blogRoutes);
 app.use('/api/users', userRoutes);
-
+app.use('/api/auth', authRoutes);
 
 
 app.get('/stream', (req, res) => {

@@ -1,5 +1,12 @@
 #Project Structure
 ```
++-----------------+        +------------------+        +------------------+        +------------------+
+|                 |        |                  |        |                  |        |                  |
+|      Route      +-------->    Controller    +-------->     Service      +-------->       Model      |
+|                 |        |                  |        |                  |        |                  |
++-----------------+        +------------------+        +------------------+        +------------------+
+```
+```
     /server:
     /models: MongoDB models (Mongoose schemas).
     /routes: Express route definitions.
