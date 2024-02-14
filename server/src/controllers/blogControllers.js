@@ -21,7 +21,7 @@ exports.createBlog = async (req, res) => {
 }
 
 exports.updateBlog = async (req, res) => {
-
+    
 }
 
 exports.readBlog = async (req, res) => {
@@ -30,11 +30,9 @@ exports.readBlog = async (req, res) => {
     if (req.query.title) {
         blogQuery.title = { $regex: req.query.title, $options: 'i' };
     }
-
     if (req.query.author) {
         blogQuery.author = { $regex: req.query.author, $options: 'i' };
     }
-
     try{
         const blog = await Blog.find(blogQuery);
         res.status(200).json({message: "Blog read", blogs: blog})
